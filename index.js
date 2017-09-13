@@ -382,6 +382,9 @@ let min = function () {
     document.getElementById("errorF").innerHTML=' ';
     document.getElementById("errortel").innerHTML=' ';
     document.getElementById("errorem").innerHTML=' ';
+
+    document.getElementById('pfirstname').disabled = true;
+    document.getElementById('psecondname').disabled = true;
 };
 
 
@@ -752,8 +755,8 @@ let plus_2 = function () {
     document.getElementById("prosmemail").innerText=' ';
     document.getElementById("prosmemail").innerHTML="<div id='prosmemail_block' ><input  disabled='disabled' class='telcss' type='email' pattern='^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$' maxlength='30'  onchange='pechange(this)'> <i  class='fa fa-times' aria-hidden='true' onclick='delet(this)' title='Удалить Email'> </i> </div>";
 
-    
-    
+
+
 
 
     let telenumber1 = maxblock3.email;
@@ -978,7 +981,7 @@ let repl = function () {
 
 let sav = function () {
 
-    
+
     let i = document.getElementById('pid').value;
     console.log(i);
 
@@ -991,7 +994,8 @@ let sav = function () {
 
     let fist =  document.getElementById('pfirstname').value;
     let second = document.getElementById('psecondname').value;
-
+    document.getElementById('pfirstname').disabled = true;
+    document.getElementById('psecondname').disabled = true;
     let tableElem = document.getElementById('prosmtel');
     let elements = tableElem.getElementsByTagName('input');
     let tel =[];
