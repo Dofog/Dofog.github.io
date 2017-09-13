@@ -42,7 +42,7 @@ button{
 }
 
 #pfirstname  {
-    margin-left: 40px;
+    margin-left: 51px;
     margin-top: 10px;
     margin-right: 5px;
 
@@ -95,6 +95,3 @@ input:invalid {
     border-bottom-width: thin ;
 }
 
-#pfirstname{
-    margin-left: 51px;
-}
