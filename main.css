@@ -94,3 +94,7 @@ input:invalid {
     border-bottom-style: solid ;
     border-bottom-width: thin ;
 }
+
+.pfirstname{
+    margin-left: 51px;
+}
