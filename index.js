@@ -219,6 +219,10 @@ function maxconent(obj1) {
     document.getElementById("prosmemail_block").innerHTML="  <input disabled='disabled' type='email' pattern='^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$' maxlength='30'  onchange='pechange(this)' class='telcss'> ";
     blocky.querySelector('input').value= telenumber1[0];
 
+    if(telenumber1.length==0){
+        blocky.querySelector('input').value='';
+    }
+
     document.getElementById("pid").value = maxblock.ids;
     console.log(obj1.parentNode.id);
 
@@ -650,8 +654,17 @@ let plus_1 = function () {
         document.getElementById("prosmemail").appendChild(block2y[i1]);
 
     }
+
+
+
     document.getElementById("prosmemail_block").innerHTML="  <input disabled='disabled' type='email' pattern='^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$' maxlength='30'  onchange='pechange(this)' class='telcss'> ";
     blocky.querySelector('input').value= telenumber1[0];
+
+
+    if(telenumber1.length==0){
+        blocky.querySelector('input').value= '';
+        blocky.querySelector('input').disabled= true;
+    }
     document.getElementById("pid").value = maxblock3.ids;
 
 
@@ -687,6 +700,8 @@ let plus_1 = function () {
     block2[i2].querySelector('input').disabled= false;
     document.getElementById("prosmtel_block").innerHTML=" <input  disabled='disabled' class='telcss' pattern='[+]380-[0-9]{2}-[0-9]{3}-[0-9]{2}-[0-9]{2}' maxlength='17' class='telcss' onclick='pmask(this)' onblur='ptelchange(this)'>";
     block.querySelector('input').value= telenumber[0];
+
+
 
 
     let header = window.document.getElementById('header');
@@ -736,6 +751,10 @@ let plus_2 = function () {
 
     document.getElementById("prosmemail").innerText=' ';
     document.getElementById("prosmemail").innerHTML="<div id='prosmemail_block' ><input  disabled='disabled' class='telcss' type='email' pattern='^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$' maxlength='30'  onchange='pechange(this)'> <i  class='fa fa-times' aria-hidden='true' onclick='delet(this)' title='Удалить Email'> </i> </div>";
+
+    
+    
+
 
     let telenumber1 = maxblock3.email;
     let blocky = document.getElementById('prosmemail_block');
@@ -790,10 +809,24 @@ let plus_2 = function () {
     }
 
     i2--;
-    block2[i2].querySelector('input').value= '';
-    block2[i2].querySelector('input').disabled= false;
+    if(telenumber.length!=0){
+        block2[i2].querySelector('input').value = '';
+        block2[i2].querySelector('input').disabled= false;
+
+
+    }
+
+
     document.getElementById("prosmemail_block").innerHTML="  <input disabled='disabled' type='email' pattern='^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$' maxlength='30'  onchange='pechange(this)' class='telcss'> ";
     block.querySelector('input').value= telenumber[0];
+
+
+    if(telenumber.length==0){
+        block.querySelector('input').value= '';
+        block.querySelector('input').disabled= false;
+    }
+
+
     let header = window.document.getElementById('header');
     let vis = window.document.getElementById('visible');
     vis.style.display = 'none';
