@@ -150,7 +150,7 @@
         }
         else {
             console.log("Не всі поля заполнені");
-            document.getElementById("error").innerText='Імя,фамілія,перше поле телефону обовязково повино бути заповнено';
+            document.getElementById("error").innerText='Імя,Прізвище,перше поле телефону обовязково повино бути заповнено';
 
         }
 
@@ -172,7 +172,7 @@ function maxconent(obj1) {
     document.getElementById("psecondname").value = maxblock.second;
 
     document.getElementById("prosmtel").innerText=' ';
-    document.getElementById("prosmtel").innerHTML="<div id='prosmtel_block' > <input disabled='disabled' class='telcss' pattern='[+]380-[0-9]{2}-[0-9]{3}-[0-9]{2}-[0-9]{2}' maxlength='17' class='telcss' onclick='pmask(this)' onblur='ptelchange(this)' > <i class='fa fa-times' aria-hidden='true' onclick='delet(this)' title='Удалить телефон'> </i> </div>";
+    document.getElementById("prosmtel").innerHTML="<div id='prosmtel_block' > <input disabled='disabled' class='telcss' pattern='[0-9]+' maxlength='17' class='telcss'  onblur='ptelchange(this)' > <i class='fa fa-times' aria-hidden='true' onclick='delet(this)' title='Удалить телефон'> </i> </div>";
 
     let telenumber = maxblock.tel;
     let block = document.getElementById('prosmtel_block');
@@ -527,7 +527,7 @@ let delet = function (obj) {
         console.log(temp1);
         localStorage.setItem(temp,JSON.stringify(temp1));
         document.getElementById("prosmtel").innerText=' ';
-        document.getElementById("prosmtel").innerHTML="<div id='prosmtel_block' > <input  disabled='disabled' class='telcss' pattern='[+]380-[0-9]{2}-[0-9]{3}-[0-9]{2}-[0-9]{2}' maxlength='17' class='telcss' onclick='pmask(this)' onblur='ptelchange(this)'>  <i class='fa fa-times' aria-hidden='true' onclick='delet(this)' title='Удалить телефон'> </i> </div>";
+        document.getElementById("prosmtel").innerHTML="<div id='prosmtel_block' > <input  disabled='disabled' class='telcss' pattern='[0-9]+' maxlength='17' class='telcss'  onblur='ptelchange(this)'>  <i class='fa fa-times' aria-hidden='true' onclick='delet(this)' title='Удалить телефон'> </i> </div>";
         let temp3 =document.getElementById('pid').value;
 
         let miniblock = localStorage.getItem(temp3) ;
@@ -554,7 +554,7 @@ let delet = function (obj) {
             document.getElementById("prosmtel").appendChild(block2[i1]);
         }
 
-        document.getElementById("prosmtel_block").innerHTML="<input  disabled='disabled' class='telcss' pattern='[+]380-[0-9]{2}-[0-9]{3}-[0-9]{2}-[0-9]{2}' maxlength='17' class='telcss' onclick='pmask(this)' onblur='ptelchange(this)'> ";
+        document.getElementById("prosmtel_block").innerHTML="<input  disabled='disabled' class='telcss' pattern='[0-9]+' maxlength='17' class='telcss'  onblur='ptelchange(this)'> ";
         block.querySelector('input').value= telenumber[0];
 
 
@@ -609,7 +609,7 @@ let plus_1 = function () {
     document.getElementById("psecondname").value = maxblock3.second;
 
     document.getElementById("prosmtel").innerText=' ';
-    document.getElementById("prosmtel").innerHTML="<div id='prosmtel_block' > <input disabled='disabled' class='telcss' pattern='[+]380-[0-9]{2}-[0-9]{3}-[0-9]{2}-[0-9]{2}' maxlength='17' class='telcss' onclick='pmask(this)' onblur='ptelchange(this)' > <i class='fa fa-times' aria-hidden='true' onclick='delet(this)' title='Удалить телефон'> </i> </div>";
+    document.getElementById("prosmtel").innerHTML="<div id='prosmtel_block' > <input disabled='disabled' class='telcss' pattern='[0-9]+' maxlength='17' class='telcss'  onblur='ptelchange(this)' > <i class='fa fa-times' aria-hidden='true' onclick='delet(this)' title='Удалить телефон'> </i> </div>";
 
     let telenumber3 = maxblock3.tel;
     let block3 = document.getElementById('prosmtel_block');
@@ -628,7 +628,7 @@ let plus_1 = function () {
         document.getElementById("prosmtel").appendChild(block23[i1]);
 
     }
-    document.getElementById("prosmtel_block").innerHTML="<input disabled='disabled' class='telcss'>  pattern='[+]380-[0-9]{2}-[0-9]{3}-[0-9]{2}-[0-9]{2}' maxlength='17' class='telcss' onclick='pmask(this)' onblur='ptelchange(this)' ";
+    document.getElementById("prosmtel_block").innerHTML="<input disabled='disabled' class='telcss'>  pattern='[0-9]+' maxlength='17' class='telcss'  onblur='ptelchange(this)' ";
 
     block3.querySelector('input').value= telenumber3[0];
 
@@ -672,7 +672,7 @@ let plus_1 = function () {
 
 
     document.getElementById("prosmtel").innerText=' ';
-    document.getElementById("prosmtel").innerHTML="<div id='prosmtel_block'> <input disabled='disabled' class='telcss' pattern='[+]380-[0-9]{2}-[0-9]{3}-[0-9]{2}-[0-9]{2}' maxlength='17' class='telcss' onclick='pmask(this)' onblur='ptelchange(this)'>  <i class='fa fa-times' aria-hidden='true' onclick='delet(this)' title='Удалить телефон'> </i> </div>";
+    document.getElementById("prosmtel").innerHTML="<div id='prosmtel_block'> <input disabled='disabled' class='telcss' pattern='[0-9]+' maxlength='17' class='telcss'  onblur='ptelchange(this)'>  <i class='fa fa-times' aria-hidden='true' onclick='delet(this)' title='Удалить телефон'> </i> </div>";
     let temp =document.getElementById('pid').value;
         let miniblock = localStorage.getItem(temp) ;
         let maxblock = JSON.parse(miniblock);
@@ -697,7 +697,7 @@ let plus_1 = function () {
     i2--;
     block2[i2].querySelector('input').value= '';
     block2[i2].querySelector('input').disabled= false;
-    document.getElementById("prosmtel_block").innerHTML=" <input  disabled='disabled' class='telcss' pattern='[+]380-[0-9]{2}-[0-9]{3}-[0-9]{2}-[0-9]{2}' maxlength='17' class='telcss' onclick='pmask(this)' onblur='ptelchange(this)'>";
+    document.getElementById("prosmtel_block").innerHTML=" <input  disabled='disabled' class='telcss' pattern='[0-9]+' maxlength='17' class='telcss'  onblur='ptelchange(this)'>";
     block.querySelector('input').value= telenumber[0];
 
 
@@ -724,7 +724,7 @@ let plus_2 = function () {
     document.getElementById("psecondname").value = maxblock3.second;
 
     document.getElementById("prosmtel").innerText=' ';
-    document.getElementById("prosmtel").innerHTML="<div id='prosmtel_block' > <input disabled='disabled' class='telcss' pattern='[+]380-[0-9]{2}-[0-9]{3}-[0-9]{2}-[0-9]{2}' maxlength='17' class='telcss' onclick='pmask(this)' onblur='ptelchange(this)' > <i class='fa fa-times' aria-hidden='true' onclick='delet(this)' title='Удалить телефон'> </i> </div>";
+    document.getElementById("prosmtel").innerHTML="<div id='prosmtel_block' > <input disabled='disabled' class='telcss' pattern='[0-9]+' maxlength='17' class='telcss'  onblur='ptelchange(this)' > <i class='fa fa-times' aria-hidden='true' onclick='delet(this)' title='Удалить телефон'> </i> </div>";
 
     let telenumber3 = maxblock3.tel;
     let block3 = document.getElementById('prosmtel_block');
@@ -743,7 +743,7 @@ let plus_2 = function () {
         document.getElementById("prosmtel").appendChild(block23[i1]);
 
     }
-    document.getElementById("prosmtel_block").innerHTML="<input disabled='disabled' class='telcss'  pattern='[+]380-[0-9]{2}-[0-9]{3}-[0-9]{2}-[0-9]{2}' maxlength='17' class='telcss' onclick='pmask(this)' onblur='ptelchange(this)'> ";
+    document.getElementById("prosmtel_block").innerHTML="<input disabled='disabled' class='telcss'  pattern='[0-9]+' maxlength='17' class='telcss'  onblur='ptelchange(this)'> ";
 
     block3.querySelector('input').value= telenumber3[0];
 
@@ -1049,7 +1049,7 @@ let sav = function () {
     }
     else {
         console.log("Не всі поля заполнені");
-        document.getElementById("perror").innerText='Імя,фамілія,перше поле телефону обовязково повино бути заповнено';
+        document.getElementById("perror").innerText='Імя,Прізвище,перше поле телефону обовязково повино бути заповнено';
 
     }
 

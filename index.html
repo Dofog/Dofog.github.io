@@ -14,11 +14,11 @@
 <div id="header" style="display: none">
 
          <input id='firstname'  class="firstcss" type="text" pattern="[a-zA-Zа-яА-ЯіІ'єЄїЇ]+" maxlength="20" placeholder="Ім'я"    onchange="Ichange(this)">
-    <br> <input id='secondname' class="seccss"   type="text" pattern="[a-zA-Zа-яА-ЯіІ'єЄїЇ]+" maxlength="20" placeholder="Фамілія" onchange="Fchange(this)">
-    <br>Формат телефона +380-xx-xxx-xx-xx
+    <br> <input id='secondname' class="seccss"   type="text" pattern="[a-zA-Zа-яА-ЯіІ'єЄїЇ]+" maxlength="20" placeholder="Прізвище" onchange="Fchange(this)">
+
     <div id="creattel">
         <div id="creattel_block"  style="display: block">
-            <input  placeholder="Телефон" pattern="[+]380-[0-9]{2}-[0-9]{3}-[0-9]{2}-[0-9]{2}" maxlength="17" class="telcss" onclick="mask(this)" onblur="telchange(this)" > <i class="fa fa-times" aria-hidden="true" onclick="del(this)" title="Удалить телефон" style="display: none"> </i>
+            <input  placeholder="Телефон" pattern="[0-9]+" maxlength="17" class="telcss"  onblur="telchange(this)" > <i class="fa fa-times" aria-hidden="true" onclick="del(this)" title="Удалить телефон" style="display: none"> </i>
         </div>
     </div>
 
@@ -55,12 +55,12 @@
     Ім'я<input id='pfirstname' disabled="disabled" type="text" pattern="[a-zA-Zа-яА-ЯіІєЄїЇ]+" maxlength="20"     onchange="pIchange(this)" >
     </div>
     <div id="prosmse">
-        Фамілія<input id='psecondname' disabled="disabled" type="text" pattern="[a-zA-Zа-яА-ЯіІ'єЄїЇ]+" maxlength="20"  onchange="pFchange(this)">
+        Прізвище<input id='psecondname' disabled="disabled" type="text" pattern="[a-zA-Zа-яА-ЯіІ'єЄїЇ]+" maxlength="20"  onchange="pFchange(this)">
     </div>
         <br>Телефон
     <div id="prosmtel">
         <div id="prosmtel_block" >
-            <input  disabled="disabled" class="telcss" pattern="[+]380-[0-9]{2}-[0-9]{3}-[0-9]{2}-[0-9]{2}" maxlength="17" class="telcss" onclick="pmask(this)" onblur="ptelchange(this)" > <i class="fa fa-times" aria-hidden="true" onclick="del(this)" title="Удалить телефон"> </i>
+            <input  disabled="disabled" class="telcss" pattern="[0-9]+" maxlength="17" class="telcss" onblur="ptelchange(this)" > <i class="fa fa-times" aria-hidden="true" onclick="del(this)" title="Удалить телефон"> </i>
         </div>
     </div>
     <button id='plus_1' onclick="sav();plus_1(this);"> додати номер</button>
