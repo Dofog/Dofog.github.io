@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.css">
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="main.css">
+    
+</head>
+<body style="width: 320px" >
+<div class="mob" >
+
+<div id="header" style="display: none">
+
+         <input id='firstname'  class="firstcss" type="text" pattern="[a-zA-Zа-яА-ЯіІ'єЄїЇ]+" maxlength="20" placeholder="Ім'я"    onchange="Ichange(this)">
+    <br> <input id='secondname' class="seccss"   type="text" pattern="[a-zA-Zа-яА-ЯіІ'єЄїЇ]+" maxlength="20" placeholder="Фамілія" onchange="Fchange(this)">
+    <br>Формат телефона +380-xx-xxx-xx-xx
+    <div id="creattel">
+        <div id="creattel_block"  style="display: block">
+            <input  placeholder="Телефон" pattern="[+]380-[0-9]{2}-[0-9]{3}-[0-9]{2}-[0-9]{2}" maxlength="17" class="telcss" onclick="mask(this)" onblur="telchange(this)" > <i class="fa fa-times" aria-hidden="true" onclick="del(this)" title="Удалить телефон" style="display: none"> </i>
+        </div>
+    </div>
+
+    <i class="fa fa-plus" id='plus_t' aria-hidden="true"> додати номер</i>
+     <br>
+
+    <div id="createmail">
+        <div id="createmail_block"  style="display: block">
+            <input type="email" pattern="^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$" maxlength="30" placeholder="email" onchange="echange(this)" class="emailcss"> <i class="fa fa-times" aria-hidden="true" onclick="del(this)" title="Удалить email" style="display: none"> </i>
+            
+        </div>
+    </div>
+    <i class="fa fa-plus" id='plus_e' aria-hidden="true"> додати emal</i>
+    
+     <br>
+
+    <button id='btn' >Створить контакт</button> <button onclick="min()" >Назад</button>
+    <div id="error"></div>
+    <div id="errorI"></div>
+    <div id="errorF"></div>
+    <div id="errortel"></div>
+    <div id="errorem"></div>
+    
+</div>
+<div id="visible">
+    Пошук   <input id='search' onchange="search()" > <br>
+<button id="add">Новий контакт</button>
+</div>
+
+<div id="content" ></div>
+
+<div id="prosmotr" style="display: none">
+    <div id="prosmfi">
+    Ім'я<input id='pfirstname' disabled="disabled" type="text" pattern="[a-zA-Zа-яА-ЯіІєЄїЇ]+" maxlength="20"     onchange="pIchange(this)" >
+    </div>
+    <div id="prosmse">
+        Фамілія<input id='psecondname' disabled="disabled" type="text" pattern="[a-zA-Zа-яА-ЯіІ'єЄїЇ]+" maxlength="20"  onchange="pFchange(this)">
+    </div>
+        <br>Телефон
+    <div id="prosmtel">
+        <div id="prosmtel_block" >
+            <input  disabled="disabled" class="telcss" pattern="[+]380-[0-9]{2}-[0-9]{3}-[0-9]{2}-[0-9]{2}" maxlength="17" class="telcss" onclick="pmask(this)" onblur="ptelchange(this)" > <i class="fa fa-times" aria-hidden="true" onclick="del(this)" title="Удалить телефон"> </i>
+        </div>
+    </div>
+    <button id='plus_1' onclick="sav();plus_1(this);"> додати номер</button>
+    <br>    Email
+    <div id="prosmemail">
+        <div id="prosmemail_block" >
+            <input  disabled="disabled"  class="telcss" type="email" pattern="^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$" maxlength="30"  onchange="pechange(this)"> <i class="fa fa-times" aria-hidden="true" onclick="del(this)" title="Удалить Email"> </i>
+        </div>
+    </div>
+
+
+    <button id='plus_2' onclick="sav();plus_2(this);"> додати email</button>
+    <br>
+    <br><button  onclick="minconent(this)" >Удалить контакт</button>
+    <button  onclick="min()" >Назад</button>
+
+    <br> <button  onclick="repl()" >Редагувати</button>
+    <button  onclick="sav();min();" >Зберегти</button>
+    <div id="perror"></div>
+    <div id="perrorI"></div>
+    <div id="perrorF"></div>
+    <div id="perrortel"></div>
+    <div id="perrorem"></div>
+    <input id='pid'  style="display: none">
+</div>
+</div>
+<!--<input id="field" >-->
+<script src="index.js"></script>
+</body>
+</html>
