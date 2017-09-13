@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="a03e78f9-a701-48d9-971d-35d9a639a289" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.js" afterPath="$PROJECT_DIR$/index.js" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -27,8 +28,8 @@
       <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="407">
-              <caret line="405" column="70" lean-forward="true" selection-start-line="405" selection-start-column="70" selection-end-line="405" selection-end-column="70" />
+            <state relative-caret-position="427">
+              <caret line="393" column="80" lean-forward="true" selection-start-line="393" selection-start-column="80" selection-end-line="393" selection-end-column="80" />
               <folding />
             </state>
           </provider>
@@ -224,7 +225,7 @@
       <workItem from="1504712797914" duration="5275000" />
       <workItem from="1504764691689" duration="4890000" />
       <workItem from="1505227014957" duration="33541000" />
-      <workItem from="1505291026509" duration="2981000" />
+      <workItem from="1505291026509" duration="3064000" />
     </task>
     <task id="LOCAL-00001" summary="second">
       <created>1505293442973</created>
@@ -247,11 +248,18 @@
       <option name="project" value="LOCAL" />
       <updated>1505293903789</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="secon">
+      <created>1505294030719</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1505294030720</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="163422000" />
+    <option name="totallyTimeSpent" value="163505000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -303,7 +311,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="second" />
-    <option name="LAST_COMMIT_MESSAGE" value="second" />
+    <MESSAGE value="secon" />
+    <option name="LAST_COMMIT_MESSAGE" value="secon" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -562,8 +571,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="407">
-          <caret line="405" column="70" lean-forward="true" selection-start-line="405" selection-start-column="70" selection-end-line="405" selection-end-column="70" />
+        <state relative-caret-position="427">
+          <caret line="393" column="80" lean-forward="true" selection-start-line="393" selection-start-column="80" selection-end-line="393" selection-end-column="80" />
           <folding />
         </state>
       </provider>

@@ -401,12 +401,8 @@ let search = function () {
             let tempp= localStorage.getItem(i);
             temp[i]=JSON.parse(tempp);
         }
-
         let temp2 = temp;
-
         document.getElementById("content").innerText='';
-
-
         for(let j=0;j<localStorage.length;j++){
             let tmp = document.getElementById('search').value;
             let tmp2=temp2[j].fist;
